@@ -1,52 +1,53 @@
 <?php
 /**
- * Template Name: 新着記事
+ * Template Name: ブログ/コラム
 **/
 
 get_header(); ?>
 <main id="main">
-  <section class="hero-section inner-page">
-    <?php get_template_part('template/wave_others'); ?>
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-12">
-          <div class="row justify-content-center">
-            <div class="col-md-7 text-center hero-text">
-              <h1 data-aos="fade-up" data-aos-delay="">新着記事</h1>
-              <p data-aos="fade-up" data-aos-delay="100">皆様の役に立つ情報を発信しております</p>
-            </div>
-          </div>
-        </div>
-      </div>
+  <div class="position-relative">
+    <div class="static-bg static-blog-bg">
+      <h1 class="static-main-text d-flex flex-column text-center"><span class="static-main-text__en">Blog / Column</span><span class="static-main-text__border"></span>ブログ・コラム</h1>
     </div>
-  </section>
-  <section class="section">
+  </div>
+  <section>
     <div class="container">
-      <div class="row justify-content-center text-center mb-5">
-        <div class="col-md-8" data-aos="fade-up">
-          <h2 class="section-heading">一覧</h2>
-        </div>
-      </div>
-      <div class="col-md-8 mx-auto">
-        <ul class="list-group list-group-flush">
+      <h2 class="title d-flex flex-column text-center"><span class="title__en">Archive</span><span class="title__border"></span>記事一覧</h2>
+      <div class="row">
+        <ul class="column list-unstyled">
           <?php
+            $paged = get_query_var('paged')? get_query_var('paged') : 1;
             $args = array(
-              // 'posts_per_page' => 5
+              'post_type' => 'post',
+              'posts_per_page' => 10,
+              'paged' => $paged,
             );
-            $posts = get_posts( $args );
-            foreach ( $posts as $post ):
-            setup_postdata( $post );
+            $the_query = new WP_Query($args);
+            if ($the_query->have_posts()) :
+            while ($the_query->have_posts()) : $the_query->the_post(); 
           ?>
-          <li class="h5 mb-4 pb-4 list-group-item">
-            <a href="<?php the_permalink(); ?>"><span><?php the_time('Y年m月d日'); ?></span>　<?php the_title(); ?></a>
+          <li class="d-block d-sm-flex gap-4">
+            <div>
+              <span class="date"><?php the_time('Y.m.d'); ?></span>
+              <span class="cat">
+                <?php
+                  $categories = get_the_category();
+                    foreach( $categories as $category ) {
+                    echo '<a class="text-white" href="' . get_category_link($category->term_id) . '">' . $category->name . '</a>';
+                  }
+                ?>
+              </span>
+            </div>
+            <div>
+              <a class="d-block" href="<?php the_permalink(); ?>"><?php echo get_the_title($post->ID); ?></a>
+            </div>
           </li>
-          <?php
-            endforeach;
-            wp_reset_postdata();
-          ?>
+          <?php endwhile; endif; ?>
         </ul>
       </div>
     </div>
   </section>
+  <section></section>
+  <section></section>
 </main>
 <?php get_footer(); ?>

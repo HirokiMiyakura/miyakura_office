@@ -1,131 +1,94 @@
 <?php get_header(); ?>
-<section class="hero-section" id="hero">
-	<?php get_template_part('template/wave_index'); ?>
-	<div class="container">
-		<div class="row align-items-center">
-			<div class="col-12 hero-text-image">
-				<div class="row">
-					<div class="col-lg-8 text-center text-lg-start">
-						<h1 class="main-message" data-aos="fade-right">お客様にとって<br>唯一無二の存在になりたい</h1>
-						<p class="mb-5" data-aos="fade-right" data-aos-delay="100">
-						独立系ファイナンシャルアドバイザー（IFA）に一度ご相談下さい。<br>オーダーメイドの価値ある提案で、問題解決を目指します。
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+<main>
+<section class="bg-under">
+  <h2 class="title d-flex flex-column text-center"><span class="title__en">About</span><span class="title__border"></span>事務所概要</h2>
+  <div class="box-left-image">
+    <img class="d-none d-sm-block box-left-image__image" src="<?php echo get_template_directory_uri(); ?>/assets/img/1.jpg" alt="">
+    <div class="box-left-image__text">
+      <h2 class="mb-5 underbar">宮倉行政書士事務所について</h2>
+      <img class="d-block d-sm-none mb-4" src="<?php echo get_template_directory_uri(); ?>/assets/img/1.jpg" alt="">
+      <p class="lead mb-3">あなたの身近な法律家</p>
+      <p class="mb-5">しっかりと仕事をする。そんな当たり前を実践する法律家です。<br>しっかりと仕事をする。そんな当たり前を実践する法律家です。<br>しっかりと仕事をする。そんな当たり前を実践する法律家です。<br>しっかりと仕事をする。そんな当たり前を実践する法律家です。<br>しっかりと仕事をする。そんな当たり前を実践する法律家です。</p>
+      <p class="cv"><a class="text-decoration-none" href="<?php echo home_url(); ?>/about">詳細はこちら</a></p>
+    </div>
+  </div>
 </section>
-<main id="main">
-<!-- <section class="section">
-		<div class="container">
-			<div class="row justify-content-center text-center mb-5">
-				<div class="col-md-8" data-aos="fade-up">
-					<h2 class="section-heading">無料金融知識向上セミナー開催</h2>
-				</div>
-			</div>
-			<div class="col-md-8 mx-auto">
-				<p>「金融商品やサービスだけでなく相続対策に至るまで様々な問題解決のヒントをお伝えしたい」との思いから、皆様が気軽に相談したり、情報共有ができる場として積極的にセミナーを開催しております。<br>
-参加無料ですので、是非ご参加ください。</p>
-			</div>
-		</div>
-	</section> -->
-	<section class="section">
-		<div class="container">
-			<div class="row align-items-center">
-				<div class="col-md-6 me-auto">
-					<h2 class="mb-4">ご挨拶</h2>
-					<p class="mb-4">当ホームページをご覧いただきありがとうございます。<br>このホームページでは、IFA（Independent Financial Advisor）という仕事についてや、お金にまつわる様々な情報を発信していきたいと考えております。<br>あなたの財務計画をサポートし、最高のサービスを提供することが我々の使命です。<br>お悩みやご質問があれば、いつでもお気軽にご相談ください。<br>心からのご挨拶を申し上げます。</p>
-					<p><a href="<?php echo home_url(); ?>/contact" class="btn btn-primary w-100">無料相談はこちらから</a></p>
-				</div>
-				<div class="col-md-5" data-aos="fade-left">
-					<img
-						src="<?php echo get_template_directory_uri(); ?>/assets/img/woman.jpg"
-						alt="Image"
-						class="img-fluid rounded-3"
-					/>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="section">
-		<div class="container">
-			<div class="row align-items-center">
-				<div class="col-md-6 order-md-2">
-					<h2 class="mb-4">無料金融知識向上セミナー開催</h2>
-					<p class="mb-4">「金融商品やサービスだけでなく相続対策に至るまで様々な問題解決のヒントをお伝えしたい」との思いから、皆様が気軽に相談したり、情報共有ができる場として積極的にセミナーを開催しております。<br>
-参加無料ですので、是非ご参加ください。</p>
-					<p><a href="<?php echo home_url(); ?>/contact" class="btn btn-primary w-100">無料セミナーはこちらから</a></p>
-				</div>
-				<div class="col-md-5 me-auto" data-aos="fade-right">
-					<img
-						src="<?php echo get_template_directory_uri(); ?>/assets/img/interview.jpg"
-						alt="Image"
-						class="img-fluid rounded-3"
-					/>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="section">
-		<div class="container">
-			<div class="row justify-content-center text-center mb-5">
-				<div class="col-md-5" data-aos="fade-up">
-					<h2 class="section-heading">サービス</h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4 col-sm-12">
-					<div class="step">
-						<span class="number">01</span>
-						<h3>ポートフォリオ運用</h3>
-						<p>マーケット環境、分散効果投資効率、リスク許容度を共有し問題解決に向けた提案をいたします。</p>
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-12">
-					<div class="step">
-						<span class="number">02</span>
-						<h3>投資信託積立</h3>
-						<p>ドルコスト平均法によるリスクを抑えた効率的な運用をご案内します。</p>
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-12">
-					<div class="step">
-						<span class="number">03</span>
-						<h3>相続対策</h3>
-						<p>大切な家族に資産を残すための提案をご用意しております。</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="section">
-		<div class="container">
-			<div class="row justify-content-center text-center mb-5">
-				<div class="col-md-5" data-aos="fade-up">
-					<h2 class="section-heading">新着記事</h2>
-				</div>
-			</div>
-			<div class="col-md-8 mx-auto">
-				<ul class="list-group list-group-flush">
-					<?php
-						$args = array(
-							'posts_per_page' => 5
-						);
-						$posts = get_posts( $args );
-						foreach ( $posts as $post ):
-						setup_postdata( $post );
-					?>
-					<li class="h5 mb-4 pb-4 list-group-item">
-						<a href="<?php the_permalink(); ?>"><span><?php the_time('Y年m月d日'); ?></span>　<?php the_title(); ?></a>
-					</li>
-					<?php
-						endforeach;
-						wp_reset_postdata();
-					?>
-				</ul>
-			</div>
-		</div>
-	</section>
+<section class="">
+  <h2 class="title d-flex flex-column text-center"><span class="title__en">Service</span><span class="title__border"></span>取扱業務</h2>
+  <div class="service box-right-image flex-row-reverse">
+    <img class="d-none d-sm-block box-right-image__image" src="<?php echo get_template_directory_uri(); ?>/assets/img/1.jpg" alt="">
+    <div class="box-right-image__text">
+      <h2 class="mb-5 underbar">VISA申請</h2>
+      <img class="d-block d-sm-none mb-4" src="<?php echo get_template_directory_uri(); ?>/assets/img/1.jpg" alt="">
+      <p class="lead mb-3">あなたの身近な法律家</p>
+      <p class="mb-5">VISA申請の詳細が入ります。VISA申請の詳細が入ります。VISA申請の詳細が入ります。
+        VISA申請の詳細が入ります。VISA申請の詳細が入ります。VISA申請の詳細が入ります。
+        VISA申請の詳細が入ります。VISA申請の詳細が入ります。VISA申請の詳細が入ります。</p>
+      <p class="cv"><a class="text-decoration-none" href="<?php echo home_url(); ?>/service">詳細はこちら</a></p>
+    </div>
+  </div>
+  <div class="service box-left-image">
+    <img class="d-none d-sm-block box-left-image__image" src="<?php echo get_template_directory_uri(); ?>/assets/img/1.jpg" alt="">
+    <div class="box-left-image__text">
+      <h2 class="mb-5 underbar">許認可申請</h2>
+      <img class="d-block d-sm-none mb-4" src="<?php echo get_template_directory_uri(); ?>/assets/img/1.jpg" alt="">
+      <p class="lead mb-3">あなたの身近な法律家</p>
+      <p class="mb-5">しっかりと仕事をする。そんな当たり前を実践する法律家です。<br>しっかりと仕事をする。そんな当たり前を実践する法律家です。<br>しっかりと仕事をする。そんな当たり前を実践する法律家です。<br>しっかりと仕事をする。そんな当たり前を実践する法律家です。<br>しっかりと仕事をする。そんな当たり前を実践する法律家です。</p>
+      <p class="cv"><a class="text-decoration-none" href="<?php echo home_url(); ?>/service">詳細はこちら</a></p>
+    </div>
+  </div>
+  <div class="service box-right-image flex-row-reverse">
+    <img class="d-none d-sm-block box-right-image__image" src="<?php echo get_template_directory_uri(); ?>/assets/img/1.jpg" alt="">
+    <div class="box-right-image__text">
+      <h2 class="mb-5 underbar">一般民事</h2>
+      <img class="d-block d-sm-none mb-4" src="<?php echo get_template_directory_uri(); ?>/assets/img/1.jpg" alt="">
+      <p class="lead mb-3">あなたの身近な法律家</p>
+      <p class="mb-5">VISA申請の詳細が入ります。VISA申請の詳細が入ります。VISA申請の詳細が入ります。
+        VISA申請の詳細が入ります。VISA申請の詳細が入ります。VISA申請の詳細が入ります。
+        VISA申請の詳細が入ります。VISA申請の詳細が入ります。VISA申請の詳細が入ります。</p>
+      <p class="cv"><a class="text-decoration-none" href="<?php echo home_url(); ?>/service">詳細はこちら</a></p>
+    </div>
+  </div>
+  <div class="box-left-image">
+    <img class="d-none d-sm-block box-left-image__image" src="<?php echo get_template_directory_uri(); ?>/assets/img/1.jpg" alt="">
+    <div class="box-left-image__text">
+      <h2 class="mb-5 underbar">その他業務</h2>
+      <img class="d-block d-sm-none mb-4" src="<?php echo get_template_directory_uri(); ?>/assets/img/1.jpg" alt="">
+      <p class="lead mb-3">あなたの身近な法律家</p>
+      <p class="mb-5">しっかりと仕事をする。そんな当たり前を実践する法律家です。<br>しっかりと仕事をする。そんな当たり前を実践する法律家です。<br>しっかりと仕事をする。そんな当たり前を実践する法律家です。<br>しっかりと仕事をする。そんな当たり前を実践する法律家です。<br>しっかりと仕事をする。そんな当たり前を実践する法律家です。</p>
+      <p class="cv"><a class="text-decoration-none" href="<?php echo home_url(); ?>/service">詳細はこちら</a></p>
+    </div>
+  </div>
+</section>
+<section class="bg-under">
+  <div class="container">
+    <h2 class="title d-flex flex-column text-center"><span class="title__en">Blog / Column</span><span class="title__border"></span>ブログ・コラム</h2>
+    <div class="row">
+      <ul class="column list-unstyled">
+        <?php if ( have_posts() ) : ?>
+          <?php while(have_posts()): the_post(); ?>
+            <?php echo get_template_part('template/loop'); ?>
+          <?php endwhile; ?>
+        <?php endif; ?>
+      </ul>
+    </div>
+  </div>
+</section>
+<section class="bg-above">
+  <div class="container">
+    <h2 class="title d-flex flex-column text-center"><span class="title__en">Voice</span><span class="title__border"></span>お客様の声</h2>
+    <div class="row">
+      <?php echo get_template_part('template/swiper_voice'); ?>
+    </div>
+  </div>
+</section>
+<section class="bg-under pb-0">
+  <div class="container-fluid">
+    <h2 class="title d-flex flex-column text-center"><span class="title__en">Access</span><span class="title__border"></span>アクセス</h2>
+    <div class="row">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7622949948072!2d139.69370777631!3d35.65822773123632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ca9ff584c57%3A0xf4cf3b320fde92ec!2z44CSMTUwLTAwNDMg5p2x5Lqs6YO95riL6LC35Yy66YGT546E5Z2C77yS5LiB55uu77yR77yV4oiS77yRIOODjuOCoumBk-eOhOWdgg!5e0!3m2!1sja!2sjp!4v1707360366170!5m2!1sja!2sjp" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
 </main>
 <?php get_footer(); ?>

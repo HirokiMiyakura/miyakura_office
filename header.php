@@ -1,46 +1,71 @@
-<!DOCTYPE html>
-<html <?php language_attributes(); ?> class="no-js">
+<!doctype html>
+<html lang="en">
 <head>
-<meta charset="<?php bloginfo('charset'); ?>" />
-<meta content="width=device-width, initial-scale=1.0" name="viewport" />
-<meta content="" name="description" />
-<meta content="" name="keywords" />
-<title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
-<!-- Favicons -->
-<link href="assets/img/favicon.png" rel="icon" />
-<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>宮倉行政書士事務所</title>
+<link href="<?php echo get_template_directory_uri(); ?>/assets/css/ress.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<link href="<?php echo get_template_directory_uri(); ?>/assets/scss/hamburger.css" rel="stylesheet" />
+<link href="<?php echo get_template_directory_uri(); ?>/assets/scss/common.css" rel="stylesheet" />
+<link href="<?php echo get_template_directory_uri(); ?>/assets/scss/main.css" rel="stylesheet" />
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
-<!-- Vendor CSS Files -->
-<link href="<?php echo get_template_directory_uri(); ?>/assets/vendor/aos/aos.css" rel="stylesheet" />
-<link href="<?php echo get_template_directory_uri(); ?>/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-<link href="<?php echo get_template_directory_uri(); ?>/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
-<link href="<?php echo get_template_directory_uri(); ?>/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
-<link href="<?php echo get_template_directory_uri(); ?>/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
-<!-- Template Main CSS File -->
-<link href="<?php echo get_template_directory_uri(); ?>/assets/css/style.css" rel="stylesheet" />
-<link href="<?php echo get_template_directory_uri(); ?>/assets/scss/main.css" rel="stylesheet" />
-<?php wp_head(); ?>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
-<header id="header" class="fixed-top d-flex align-items-center">
-  <div class="container d-flex justify-content-between align-items-center">
-    <div class="logo">
-      <h1><a href="<?php echo home_url(); ?>/">資産運用アドバイザー IFA 鈴木義典</a></h1>
+<header>
+  <!-- パソコンメニュー -->
+  <div class="container-fluid position-relative">
+    <div class="header-menu row px-1 px-md-4 px-lg-5 d-flex">
+      <div class="d-block d-sm-flex justify-content-between align-items-center lh-0">
+        <div>
+          <a class="d-flex flex-column pt-3 pt-sm-0 text-center text-decoration-none" href="<?php echo home_url(); ?>">
+            <h1 class="fs-5 mb-0"><span class="en">Miyakura Law Office</span>宮倉行政書士事務所</h1>
+          </a>
+        </div>
+        <div class="d-none d-sm-block">
+          <ul class="gap-4 gap-md-5 mb-0 d-flex list-unstyled">
+            <li class="">
+              <a class="d-flex flex-column text-center text-decoration-none" href="<?php echo home_url(); ?>/service"><span class="en">Service</span>取扱業務</a>
+            </li>
+            <li class="">
+              <a class="d-flex flex-column text-center text-decoration-none" href="<?php echo home_url(); ?>/price"><span class="en">Price</span>料金体系</a>
+            </li>
+            <li class="">
+              <a class="d-flex flex-column text-center text-decoration-none" href="<?php echo home_url(); ?>/voice"><span class="en">Voice</span>お客様の声</a>
+            </li>
+            <li class="">
+              <a class="d-flex flex-column text-center text-decoration-none" href="<?php echo home_url(); ?>/about"><span class="en">About</span>事務所概要</a>
+            </li>
+            <li class="">
+              <a class="d-flex flex-column text-center text-decoration-none" href="<?php echo home_url(); ?>/column"><span class="en">Blog/Column</span>ブログ・コラム</a>
+            </li>
+            <!-- <li class="">
+              <a class="d-flex flex-column text-center text-decoration-none" href="<?php echo home_url(); ?>/faq"><span class="en">FAQ</span>よくあるご質問</a>
+            </li> -->
+          </ul>
+        </div>
+      </div>
     </div>
-    <nav id="navbar" class="navbar">
-      <ul>
-        <li><a <?php if( is_front_page() ): ?> class="active" <?php endif; ?> href="<?php echo home_url(); ?>/">ホーム</a></li>
-        <li><a <?php if( is_page('ifa') ): ?> class="active" <?php endif; ?> href="<?php echo home_url(); ?>/ifa">IFAとは</a></li>
-        <li><a <?php if( is_page('profile') ): ?> class="active" <?php endif; ?> href="<?php echo home_url(); ?>/profile">プロフィール</a></li>
-        <li><a <?php if( is_page('blogs') ): ?> class="active" <?php endif; ?> href="<?php echo home_url(); ?>/blogs">新着記事</a></li>
-        <li><a <?php if( is_page('access') ): ?> class="active" <?php endif; ?> href="<?php echo home_url(); ?>/access">アクセス</a></li>
-        <li><a <?php if( is_page('contact') ): ?> class="active" <?php endif; ?> href="<?php echo home_url(); ?>/contact">お問い合わせ</a></li>
-      </ul>
-      <i class="bi bi-list mobile-nav-toggle"></i>
-    </nav>
+    <?php get_template_part('template/hamburger'); ?>
+    <?php get_template_part('template/contact_pc'); ?>
   </div>
+  <?php if(is_front_page()) : ?>
+    <h2 class="main-message">We<br>Accelerate<br>your business</h2>
+  <?php endif; ?>
+  <!-- /パソコンメニュー -->
+  <?php if(is_front_page()) : ?>
+    <!-- swiper1 -->
+    <?php echo get_template_part('template/swiper_main'); ?>
+    <!-- /swiper1 -->
+  <?php endif; ?>
 </header>

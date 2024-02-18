@@ -1,0 +1,105 @@
+@charset "UTF-8";
+.sp-menu {
+  position: fixed;
+  z-index: -1;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  transition: all 0.3s;
+}
+.sp-menu.open {
+  padding: 40px 14px;
+  opacity: 1;
+  z-index: 5;
+}
+.sp-menu section {
+  width: 100%;
+  padding: 0 0 14px 0;
+}
+.sp-menu section h2 {
+  color: navy;
+}
+.sp-menu section .sp-link-list li {
+  font-size: 14px;
+  margin-bottom: 7px;
+}
+.sp-menu section .sp-link-list li a {
+  padding: 7px 0;
+}
+.sp-menu section .sp-sns-list li {
+  font-size: 14px;
+}
+.sp-menu section .sp-contact-list .close {
+  display: none;
+}
+.sp-menu section .sp-contact-list li {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.sp-menu section .sp-contact-list li a {
+  padding: 21px 0;
+  color: #fff;
+}
+.sp-menu section .sp-contact-list li .hamburger-img img {
+  width: 20px;
+}
+
+/*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+.openbtn {
+  position: fixed; /*ボタン内側の基点となるためrelativeを指定*/
+  cursor: pointer;
+  z-index: 6;
+  top: 14px;
+  right: 14px;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+/*ボタン内側*/
+.openbtn span {
+  display: inline-block;
+  transition: all 0.4s; /*アニメーションの設定*/
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  height: 3px;
+  background: #444;
+  width: 45%;
+}
+
+.openbtn span:nth-of-type(1) {
+  top: 15px;
+}
+
+.openbtn span:nth-of-type(2) {
+  top: 23px;
+}
+
+.openbtn span:nth-of-type(3) {
+  top: 31px;
+}
+
+/*activeクラスが付与されると線が回転して×に*/
+.openbtn.active span:nth-of-type(1) {
+  top: 18px;
+  left: 18px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 30%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+  opacity: 0; /*真ん中の線は透過*/
+}
+
+.openbtn.active span:nth-of-type(3) {
+  top: 30px;
+  left: 18px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 30%;
+}/*# sourceMappingURL=hamburger.css.map */
